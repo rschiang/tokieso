@@ -12,6 +12,7 @@ struct TokiesoApp: App {
         WindowGroup {
             ContentView()
                 .frame(minWidth: 640, maxWidth: .infinity, minHeight: 480, maxHeight: .infinity)
+                .background(Color("BackgroundColor"))
         }
         .windowStyle(HiddenTitleBarWindowStyle())
     }

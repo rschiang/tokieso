@@ -14,19 +14,21 @@ struct ContentView: View {
         VStack {
             Text(String(format: "%02d:%02d", seconds / 60, seconds % 60))
                 .font(.custom("Source Sans 3 VF", size: 512.0))
-                .foregroundColor(seconds > 0 ? .primary : .red)
                 .fontWeight(.medium)
                 .tracking(10)
                 .minimumScaleFactor(0.05)
+                .foregroundColor(seconds > 0 ? Color("TextColor") : Color("TimeUpColor"))
         }
         .padding(40)
         .onTapGesture {
-            if (self.running) {
-                self.running = false
-                self.seconds = 300
+            if (self.seconds > 0) {
+                self.running.toggle()
             } else {
-                self.running = true
+                self.reset()
             }
+        }
+        .onLongPressGesture {
+            self.reset()
         }
         .onReceive(timer) { time in
             if (self.running) {
@@ -41,6 +43,10 @@ struct ContentView: View {
     
     private let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
+    func reset() {
+        self.running = false
+        self.seconds = 300
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
