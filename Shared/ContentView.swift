@@ -8,17 +8,18 @@ import SwiftUI
 
 struct ContentView: View {
     @State var running: Bool = false
-    @State var seconds: Int = 10
+    @State var seconds: Int = 300
     
     var body: some View {
-        VStack {
-            Text(String(format: "%02d:%02d", seconds / 60, seconds % 60))
+        Color.white.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+            .mask(Text(String(format: "%02d:%02d", seconds / 60, seconds % 60))
                 .font(.custom("Source Sans 3 VF", size: 512.0))
                 .fontWeight(.medium)
                 .tracking(10)
                 .minimumScaleFactor(0.05)
-                .foregroundColor(seconds > 0 ? Color("TextColor") : Color("TimeUpColor"))
-        }
+            )
+            .colorMultiply(seconds > 0 ? Color("TextColor") : Color("TimeUpColor"))
+            .animation(.easeOut.speed(3))
         .padding(40)
         .onTapGesture {
             if (self.seconds > 0) {
@@ -51,7 +52,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(running: true, seconds: 10)
             .previewLayout(.fixed(width: 640, height: 480))
     }
 }

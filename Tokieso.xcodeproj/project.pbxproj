@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B9E83F726B5B97600DC4A45 /* TokiesoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E83E426B5B97400DC4A45 /* TokiesoApp.swift */; };
-		2B9E83F826B5B97600DC4A45 /* TokiesoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E83E426B5B97400DC4A45 /* TokiesoApp.swift */; };
 		2B9E83F926B5B97600DC4A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E83E526B5B97400DC4A45 /* ContentView.swift */; };
 		2B9E83FA26B5B97600DC4A45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E83E526B5B97400DC4A45 /* ContentView.swift */; };
 		2B9E83FB26B5B97600DC4A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E83E626B5B97600DC4A45 /* Assets.xcassets */; };
 		2B9E83FC26B5B97600DC4A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E83E626B5B97600DC4A45 /* Assets.xcassets */; };
+		2BEC04BC26B6761D0080FD88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC04BB26B6761D0080FD88 /* AppDelegate.swift */; };
+		2BEC04C026B6795F0080FD88 /* TokiesoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC04BF26B6795F0080FD88 /* TokiesoApp.swift */; };
+		2BEC04C226B679900080FD88 /* TokiesoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC04C126B679900080FD88 /* TokiesoApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B9E83E426B5B97400DC4A45 /* TokiesoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokiesoApp.swift; sourceTree = "<group>"; };
 		2B9E83E526B5B97400DC4A45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B9E83E626B5B97600DC4A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B9E83EB26B5B97600DC4A45 /* Tokieso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokieso.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +24,9 @@
 		2B9E83F326B5B97600DC4A45 /* Tokieso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokieso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9E83F526B5B97600DC4A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B9E83F626B5B97600DC4A45 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		2BEC04BB26B6761D0080FD88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BEC04BF26B6795F0080FD88 /* TokiesoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokiesoApp.swift; sourceTree = "<group>"; };
+		2BEC04C126B679900080FD88 /* TokiesoApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokiesoApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,6 @@
 		2B9E83E326B5B97400DC4A45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2B9E83E426B5B97400DC4A45 /* TokiesoApp.swift */,
 				2B9E83E526B5B97400DC4A45 /* ContentView.swift */,
 				2B9E83E626B5B97600DC4A45 /* Assets.xcassets */,
 			);
@@ -76,6 +78,7 @@
 		2B9E83ED26B5B97600DC4A45 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2BEC04C126B679900080FD88 /* TokiesoApp.swift */,
 				2B9E83EE26B5B97600DC4A45 /* Info.plist */,
 			);
 			path = iOS;
@@ -84,8 +87,10 @@
 		2B9E83F426B5B97600DC4A45 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				2BEC04BF26B6795F0080FD88 /* TokiesoApp.swift */,
 				2B9E83F526B5B97600DC4A45 /* Info.plist */,
 				2B9E83F626B5B97600DC4A45 /* macOS.entitlements */,
+				2BEC04BB26B6761D0080FD88 /* AppDelegate.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -187,8 +192,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BEC04C226B679900080FD88 /* TokiesoApp.swift in Sources */,
 				2B9E83F926B5B97600DC4A45 /* ContentView.swift in Sources */,
-				2B9E83F726B5B97600DC4A45 /* TokiesoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BEC04BC26B6761D0080FD88 /* AppDelegate.swift in Sources */,
 				2B9E83FA26B5B97600DC4A45 /* ContentView.swift in Sources */,
-				2B9E83F826B5B97600DC4A45 /* TokiesoApp.swift in Sources */,
+				2BEC04C026B6795F0080FD88 /* TokiesoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
